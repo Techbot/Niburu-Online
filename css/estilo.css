@@ -1,0 +1,42 @@
+body{
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #666;
+        /* background:url(../img/interfaz/bg2.jpg); */
+		margin:0px;
+		padding:0px;
+    }
+      h1 {
+        margin-top: 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        margin-bottom: 20px;
+        clear: both;
+      }
+      label {
+        font-size: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 3px;
+        clear: both;
+      }
+
+a{
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+#juego{
+	margin-top:20px;
+	width:700px;
+	height:500px;
+	border: solid #000; 3px;
+}
