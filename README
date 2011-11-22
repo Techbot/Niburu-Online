@@ -1,0 +1,16 @@
+:: NIBURU ONLINE ::
+2D MMORPG basado en jQuery, PHP y MySQL
+
+- Proyecto creado por: Gilberto Avalos Osuna
+- Contacto: facebook.com/gilberto.avalos 
+
+Niburu Online es un proyecto que utiliza las nuevas tecnologías para Web 2.0 como jQuery.
+
+La idea es crear un juego en línea montado en cualquier servidor web con MySQL sin necesidad
+de utilizar aplicaciones que puedan fallar en algún momento y requieran monitoreo constante.
+
+Ideas:
+- Utilizar un Game-Loop en JavaScript para hacer llamadas a funciones en PHP que se encargarán
+de mover los personajes, eventos del juego y NPCs.
+
+- Los NPC (Non Person Character) se moverán al recibir usuarios conectados en el mapa.
