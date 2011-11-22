@@ -54,7 +54,6 @@ function moverPlayer()
 			// Limitar movimiento sin salir del área
 			if (top >= 10){
 				$("#" + usuarioID).css("top",top-10);
-				console.log("Moviendo hacia arriba: " + top);
 				$.post("inc/mover.php", { posy: parseInt($("#" + usuarioID).css("top")), id_local: usuarioID } );
 			}
 		}

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen">
 <body>
 	
-	<div style="position:absolute; top:-20px; z-index:-1; width:100%; height:100%;">
+	<div style="position:absolute; top:-10px; z-index:-10; width:100%; height:90%;">
 		<img src="http://www.deviantart.com/download/65228468/2D_RPG_game_background_by_willowWISP.jpg" style="width:100%;"/>
 		
 	</div>
@@ -35,7 +35,7 @@
 	
 	<script>
     $(document).ready(function() {
-		document.getElementById("chat").scrollTop=document.getElementById("chat").scrollHeight 
+		//document.getElementById("chat").scrollTop=document.getElementById("chat").scrollHeight 
 	});
 	</script>
 	
