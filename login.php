@@ -48,7 +48,11 @@ if (!isset($_SESSION["s_usuario"])) {
 <head>
 <title>Niburu Online - Elige tu personaje</title>
 </head>
-<body>
+<body style="overflow:hidden;">
+	<div style="position:absolute; z-index:-1; width:100%; height:100%;">
+		<img src="http://www.deviantart.com/download/65228468/2D_RPG_game_background_by_willowWISP.jpg" style="width:100%;"/>
+		
+	</div>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen">
 	<script src="js/jquery.uniform.min.js" type="text/javascript" charset="utf-8"></script>

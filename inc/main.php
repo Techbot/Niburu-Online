@@ -1,6 +1,6 @@
 <?php 
 include("config.php");
-
+session_start();
 // El Mapa xD
 echo "<style>
 #juego{
@@ -30,7 +30,11 @@ top:".$localPos['posy']."px;
 </style>
 ";
 
-echo $local_div."<div class='localDiv' id='".$localPos['id']."'><div style='position:absolute; width:70px; text-align:center; font-size:12px; left:-20px; top:-18px; color:#000;'><b>".$localPos['nombre']."</b></div></div>";
+
+// Nombre del personaje para la sesión.
+$_SESSION['s_personaje_nombre'] = $localPos['nombre'];
+
+echo $local_div."<div class='localDiv' id='".$localPos['id']."'><div style='position:absolute; width:70px; text-align:center; font-size:12px; left:-20px; top:-18px; color:#000;'><b>".$_SESSION['s_personaje_nombre']."</b></div></div>";
 
 // Mostrar otros jugadores conectados
 $otros = mysql_query("SELECT * FROM personajes WHERE online = '1'");

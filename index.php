@@ -7,37 +7,13 @@
 <link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen">
 <body>
 	
-	<?php if (isset($_SESSION["s_usuario"])){ ?>
-		<div style="position:absolute; right:10px; top:10px;"><a href="salir.php">Salir</a></div>
+	<div style="position:absolute; top:-20px; z-index:-1; width:100%; height:100%;">
+		<img src="http://www.deviantart.com/download/65228468/2D_RPG_game_background_by_willowWISP.jpg" style="width:100%;"/>
 		
-		<style>
-		#chat{
-			
-			margin-left:10px;
-			float:left;
-		}
-
-		#msg{
-			width:300px;
-			height:470px;
-			overflow:auto;
-			background:lightblue;
-		}
-		</style>
-		<div id="chat">
-		<div id="msg">
-
-		</div>
-		<form onsubmit="mensaje = $('#txt').val(); $('#txt').val(' '); return false;">
-		<input type="text" id="txt" name="msg" style="width:233px;"/> <input type="submit" onsubmit="" value="Enviar"></form>
-		</div>
-		<?php include("inc/int_inventario.php"); ?>
-	<?php } ?>
-
-	
-	
+	</div>
 	
 	<?php if (!isset($_SESSION["s_usuario"])){ ?>
+		<style>body { overflow:hidden; }</style>
 		<div id="login" style="position:absolute; left:50%; margin-left:-100px; margin-top:10px;">
 			<div style="position:relative; left:-10px;"><h1>Iniciar Sesi&oacute;n</h1></div>
 			<script src="js/jquery.uniform.min.js" type="text/javascript" charset="utf-8"></script>
@@ -56,9 +32,26 @@
 			</form>
 		</div>
 	<?php } else { ?>
+	
+	<script>
+    $(document).ready(function() {
+		document.getElementById("chat").scrollTop=document.getElementById("chat").scrollHeight 
+	});
+	</script>
+	
 	<div id="juego">
-		
 	</div>
+	
+	<div style="width:700px; left:50%; margin-left:-350px; height:70px; margin-top:5px; position:relative;">
+		<div id="chat">Conectando...</div>
+		&nbsp;<input id="message" type="text" size="80" onkeyup="keyup(event);" />
+		<input type="button" value="Enviar" onclick="chat_write();" /><br />
+		<div style="width:100%; height:20px;"></div>
+	</div>
+	
+	<script language="JavaScript" type="text/javascript" src="chat.php"></script>
+
+	
 	<?php } ?>
 	
 </body>

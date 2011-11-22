@@ -11,9 +11,7 @@ var KEY = {
 var areaHeight = parseInt($("#juego").height());
 var areaWidth = parseInt($("#juego").width());
 var usuarioID = "";
-var activo_chat = false;
 var login = false;
-var mensaje = "";
 var niburu = {}
 
 // Un arreglo para guardar las teclas presionadas
@@ -27,9 +25,6 @@ $(function(){
 	// Guarda si una tecla está presionada en la variable "pressedKeys"
 	$(document).keydown(function(e){
 		niburu.pressedKeys[e.keyCode] = true;
-		if (e.keyCode = KEY.ENTER){
-			activo_chat = !activo_chat;
-		}
     });
     $(document).keyup(function(e){
     	niburu.pressedKeys[e.keyCode] = false;
@@ -41,29 +36,10 @@ function gameloop()
 {	
 	if (login == true){
 		moverPlayer();
-		//$("#juego").load($.post("inc/main.php", { id: usuarioID } ));
 		$("#juego").load("inc/main.php?id=" + usuarioID);
-		
-		chat();
+
 	}
 	
-}
-
-function chat(){
-		// Actualizar mensajes de chat
-		if (mensaje == ""){
-			$("#msg").load("inc/int_chat.php?id=" + usuarioID);
-		} else {
-			$("#msg").load("inc/int_chat.php?id=" + usuarioID + "&msg=" + mensaje);
-		}
-		
-		// Condición para texto de Chat
-		if (activo_chat == true){
-			$("#txt").focus();
-		} else {
-			$("#txt").blur();
-		}
-
 }
 
 function moverPlayer()
